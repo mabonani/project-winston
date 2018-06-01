@@ -1,0 +1,61 @@
+###
+#   Settings
+###
+spring:
+  application:
+    name: service-discovery
+  sleuth:
+    sampler:
+      probability: 1
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 3
+
+
+---
+###
+#   Dev Settings
+###
+server:
+  port: 9871
+spring:
+  profiles: dev
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+
+
+---
+###
+#   Production Peer 1
+###
+server:
+  port: 9871
+spring:
+  profiles: prod0
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:9872/eureka
+
+
+---
+###
+#   Production Peer 2
+###
+server:
+  port: 9872
+spring:
+  profiles: prod1
+eureka:
+  instance:
+    hostname: peer2
+
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:9871/eureka
+  server:
+    waitTimeInMsWhenSyncEmpty: 0

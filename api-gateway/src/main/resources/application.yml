@@ -1,0 +1,19 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: api-gateway
+  sleuth:
+    sampler:
+      probability: 1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9871/eureka
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            DispatcherServlet: DEBUG
