@@ -31,10 +31,12 @@ A microservice architecture project with Spring.
 
 ## References
 
+### Miscellaneous
+
 - [Master Microservices with Spring Boot and Spring Cloud - Udemy Course](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud)
 - [Test Driven Development with Spring Boot - Sannidhi Jalukar, Madhura Bhave](https://content.pivotal.io/springone-platform-2017/test-driven-development-with-spring-boot-sannidhi-jalukar-madhura-bhave)
 
-Technologies
+### Technologies
 
 - [Ribbon](https://spring.io/guides/gs/client-side-load-balancing/)
 - [Zuul](https://spring.io/guides/gs/routing-and-filtering/)
